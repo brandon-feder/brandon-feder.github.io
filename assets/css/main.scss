@@ -1,0 +1,208 @@
+---
+---
+
+$bg1: #e8e8e8;
+$bg2: white;
+$link-color: #284fec;
+$normal-color: black;
+
+$breakpoints: (
+  xxs: 480px,
+  xs: 768px,
+  sm: 991px,
+  md: 1280px,
+  lg: 1920px,
+  xl: 5000px
+);
+
+@mixin break($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $max-width: map-get($breakpoints, $breakpoint);
+        @media screen and (max-width: $max-width) {
+            @content;
+        }
+    } @else {
+        @error "Invalid breakpoint: #{$breakpoint}.";
+    }
+}  
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold-Italic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold-Italic.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold-Italic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Italic.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium-Italic.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('  https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {
+    background-color: $bg1;
+    color: $normal-color;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+
+hr {
+    border: solid 1px #ccc;
+    margin: 20px 0;
+}
+
+.contents-container {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: JetBrains Mono;
+}
+
+.bar {
+    background-color: $bg2;
+    float: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px;
+
+    @include break(sm) {
+        margin: 10px auto;
+        width: calc(100% - 60px) !important;
+        float: none;
+    }
+}
+
+.side-bar {
+    max-width: 300px;
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.main-bar {
+    max-width: 500px;
+}
+
+.project {
+    .project-title {
+        font-style: italic;
+        margin-bottom: 10px;
+        color: $link-color;
+        cursor: pointer;
+
+        i {
+            color: $normal-color;
+        }
+    }
+}
+
+.project-modal {
+    visibility: hidden;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    &.active {
+        visibility: visible;
+    }
+
+    .modal-header {
+        margin-bottom: 10px;
+
+        .modal-title {
+            font-weight: bold;
+        }
+
+        .modal-close {
+            float: right;
+            cursor: pointer;
+            color: $link-color;
+        }
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+    }
+}
