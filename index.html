@@ -12,7 +12,13 @@ layout: base
 <h4>Projects</h4>
 
 <div class="project">
-    
+    <div class="project-title">
+        <i class="bi bi-caret-right-fill"></i>
+        <a href="/assets/misc/probability-functor.pdf" target="_blank">The Probability Functor</a>
+    </div>
+</div>
+
+<div class="project">
     <div class="project-title modal-open">
         <i class="bi bi-caret-right-fill"></i>
         The History of Hilbert's 10th Problem
@@ -26,10 +32,109 @@ layout: base
             </div>
             <div>
                 <p>
-                    This below is a link to the recording of a presentation I gave on the History of Hilbert's 10th Problem in June '24, at the end of my senior year in high school.
+                    Below a presentation I gave on the History of Hilbert's 10th Problem in June '24, at the end of my senior year in high school.
                 </p><p style="text-align: center;">
-                    <a href="https://youtu.be/gUkVHX-dQNc" target="_blank">The History of Hilbert's 10th Problem</a>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/gUkVHX-dQNc?si=N1svGJn_Weuo9Z4F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project">
+    <div class="project-title">
+        <i class="bi bi-caret-right-fill"></i>
+        <a href="/assets/misc/completions.pdf" target="_blank">The Utility of Completions</a>
+    </div>
+</div>
+
+<div class="project">
+    <div class="project-title modal-open">
+        <i class="bi bi-caret-right-fill"></i>
+        Lehigh Internship
+    </div>
+
+    <div class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Lehigh Internship</span>
+                <i class="bi bi-x-lg modal-close"></i>
+            </div>
+            <div>  
+                <p>In the summer of 2023, I interned at Lehigh University under Dr. Rosi Reed.</p>
+
+                <p>The <a href="https://www.bnl.gov/rhic/sphenix.php" target="_blank">sPHENIX</a> experiment is a detector on  aims to study <a href="https://en.wikipedia.org/wiki/Quark%E2%80%93gluon_plasma" target="_blank">quark-gluon plasma</a> by colliding bunches of heavy-ions accelerated by Brookhaven's <a href="https://www.bnl.gov/rhic/physics.php" target="_blank">Reletavistic Heavy Ion Collider (RHIC)</a>.</p>
+
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Vyq_AYWctSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+                <p>sPHENIX contains many subsystems including several <a href="https://en.wikipedia.org/wiki/Calorimeter_(particle_physics)" target="_blank">calorimeters</a>. A collision’s <a href="https://indico.cern.ch/event/612333/contributions/2564859/attachments/1447601/2230773/Anjali_AliceIndia_VECC.pdf" target="_blank">reaction plane</a> is important in analysys of the quark-gluon plasma. The distribution of energy deposited by a collision onto these calorimeters can be used to approximate this reaction plane. During my time at Lehigh, I researched statistics relating to how well the detector approximated the reaction plane.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="project">
+    <div class="project-title modal-open">
+        <i class="bi bi-caret-right-fill"></i>
+        Brookhaven Internships
+    </div>
+
+    <div class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Brookhaven Internships</span>
+                <i class="bi bi-x-lg modal-close"></i>
+            </div>
+            <div>  
+                <p>I have interned on and off at <a href="https://www.bnl.gov/world/" target="_blank">Brookhaven National Laboratory</a> (BNL) since November 2020. During this time, I worked under Dr. Anže Slosar, and Dr. Brett Viren on three seperate projects.</p>
+
+                <br/><h3 id="frb-detection">FRB Detection</h3>
+                <p>I speant several months working on prototype algorithms for real time detection of <a href="https://en.wikipedia.org/wiki/Fast_radio_burst" target="_blank">fast radio bursts</a> (FRB). An implementation of the algorithm ran briefly on Brookhaven's BMX telescope before getting replaced by a new and improved implementation.</p>
+
+                <br/><h3 id="wirecell-toolkit-gpu-accelerated-fft-support">WireCell Toolkit GPU Accelerated FFT Support</h3>
+                <p>The second project I worked on was with Brett Viren. During the fall of 2021, I spent several weeks writting a package for <a href="https://github.com/brettviren/wire-cell-toolkit" target="_blank"><code class="language-plaintext highlighter-rouge">WireCell Toolkit</code></a> (WCT) which provided support for GPU-accelerated Discrete Fourier Transforms using NVIDIA’s <code class="language-plaintext highlighter-rouge">cuFFT</code> library. This package has since been merged with WCT.</p>
+
+                <br/><h3 id="dune-time-slice-deghosting">DUNE Time-Slice Deghosting</h3>
+                <p>The <a href="https://www.dunescience.org/" target="_blank">Deep Underground Neutrino Experiment</a> (DUNE) aims to study the properties of <a href="https://www.scientificamerican.com/article/what-is-a-neutrino/">neutrinos</a> and relies heavely on several <a href="https://en.wikipedia.org/wiki/Time_projection_chamber" target="_blank">Liquid Argon Time Projection Chambers</a> (LArTPC) to do so.</p>
+
+                <p>An LArTPC can be though of as large, paralel-plate capacitor filled with liquid argon. In the capacitor lie three planes of parallel wires, each rotated at a different angle.</p>
+
+                <p>When a neutrino enters the detector, it leave a trail of negatively charged particles. Such particles are pushed by the TPC's magnetic field towards the wire-planes. As these particles near a wire, they induce an electric current in that wire. This process is depicted on the right of the figure below.</p>
+
+                <p><img src="/assets/tpc-wires.png" alt="" style="max-width: 100%" /></p>
+
+                <p>The detector “sess” a projection of the charged particles' positions. The process of reconstructing the electrically charged particles' possitions from the wire-plane waveform is called tomographic reconstruction. A naive tomographic reconstruction would lend many “possible” positions of neutrinos.</p>
+
+                <p>When I interned, there were two aproaches to resolve this issue. The first was a series of ad-hoc, combersome heuristics developed over an extended period of time. The second aproach was to use neural networks which were faster, but needed to be trained on inherently biased simulated data.</p>
+
+                <p>I was tasked with research new algorithms for performing the tomographic reconstruction using the formality of <a href="https://arxiv.org/pdf/1806.01261.pdf" target="_blank">this paper</a>. See the <a href="https://github.com/brandon-feder/wire-cell-constraint" target="_blank">project's GitHub repo</a> for more information.</p>
+        </div>
+    </div>
+</div>
+
+<div class="project">
+    <div class="project-title modal-open">
+        <i class="bi bi-caret-right-fill"></i>
+        Grandpa's 2022 Birthday
+    </div>
+
+    <div class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Grandpa's 2022 Birthday</span>
+                <i class="bi bi-x-lg modal-close"></i>
+            </div>
+            <div>  
+                <p>For my Grandfather's 2022 birthday, I wrote a program that renders the <a href="https://en.wikipedia.org/wiki/Buddhabrot" target="_blank">Budhabrot fractal</a>. I then bought him a wall-print from <a href="www.shutterfly.com" target="_blank">Shutterfly</a>.</p>
+
+                <p>Benedikt Bitterli explains how to efficiently render your own Budhabrot on <a href="https://benedikt-bitterli.me/buddhabrot/" target="_blank">his website</a>. I also referenced <a href="https://erleuchtet.org/2010/07/ridiculously-large-buddhabrot.html" target="_blank">this</a>.</p>
+                
+                <p>Here is a VERY-compressed version of the final render:</p>
+                
+                <p><img src="/assets/images/buddhabrot.jpg"/></p>
+                
+                <p>You can get the full render <a href="https://drive.google.com/drive/folders/1gzmzXZ7OKuTLMaqhLxYTnjTB-hemVA8n?usp=sharing" target="_blank">here</a>.</p>
             </div>
         </div>
     </div>
