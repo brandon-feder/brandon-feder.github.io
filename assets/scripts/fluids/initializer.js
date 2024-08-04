@@ -1204,27 +1204,25 @@ export function activator(canvas, webGL, colorFormat, PROGRAMS, pointers) {
   }
   /////////// CHANGED BY BRANDON
   document.addEventListener("mousemove", (e) => {
-    // canvas.addEventListener("mousemove", (e) => {
-    ///////////
-
-    /////////// CHANGED BY BRANDON
-    // pointers[0].moved = pointers[0].down;
-    pointers[0].moved = true;
-    pointers[0].color = generateColor();
-    ///////////
-
-    ////////// CHANGED BY BRANDON
-    // pointers[0].dx = (e.offsetX - pointers[0].x) * 5.0;
-    // pointers[0].dy = (e.offsetY - pointers[0].y) * 5.0;
-    // pointers[0].x = e.offsetX;
-    // pointers[0].y = e.offsetY;
-
     pointers[0].dx = (e.pageX - pointers[0].x) * 5.0;
     pointers[0].dy = (e.pageY - pointers[0].y) * 5.0;
     pointers[0].x = e.pageX;
     pointers[0].y = e.pageY;
-    //////////
+    pointers[0].moved = true;
+
+    let c1 = { r: 0, g: 70 / 255, b: 130 / 255 };
+    let c2 = { r: 0, g: 194 / 255, b: 237 / 255 };
+    let l = Math.sqrt(
+      (1 - e.pageX / canvas.width) ** 2 + (1 - e.pageY / canvas.height) ** 2,
+    );
+
+    pointers[0].color = {
+      r: l * c1.r + (1 - l) * c2.r,
+      g: l * c1.g + (1 - l) * c2.g,
+      b: l * c1.b + (1 - l) * c2.b,
+    };
   });
+  //////////
 
   canvas.addEventListener("mousedown", () => {
     pointers[0].down = true;
