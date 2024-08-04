@@ -1,0 +1,2 @@
+tbe files in this folder were taken from https://github.com/malik-tillman/Fluid-JS/tree/master/src and
+slightly modified for my own needs. Changes I made are preceded by comments saying "CHANGED BY BRANDON".

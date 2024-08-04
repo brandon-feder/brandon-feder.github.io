@@ -1,2 +1,28 @@
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="module" type="/text/javascript">
+    import Fluid from "/assets/scripts/fluids/fluid.js";
+
+    const canvas = document.getElementById("fluidCanvas");
+    let fluid = new Fluid(canvas);
+
+    fluid.mapBehaviors({
+        sim_resolution: 128,
+        dye_resolution: 512,
+
+        embedded_dither: true,
+        render_shaders: false,
+        multi_color: false,
+        transparent: false,
+
+        dissipation: .9,
+        velocity: .98,
+        pressure: .8,
+        pressure_iteration: 20,
+        curl: 2,
+        emitter_size: 0.2,
+
+
+    });
+
+    fluid.activate();
+</script>
 <script src="/assets/scripts/dropdown.js"></script>
