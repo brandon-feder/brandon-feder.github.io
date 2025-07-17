@@ -10,9 +10,12 @@ To build the site, run the following.
 docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:latest jekyll build
 ```
 
-To serve, run the following.
+To serve, run one of the following.
 ```
 docker run --volume="$PWD:/srv/jekyll" -p 3000:4000 -it jekyll/jekyll:latest jekyll serve --watch --drafts
+
+docker run --rm -p 3000:4000 --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:late
+st sh -c "bundle update && jekyll serve"
 ```
 
 ### Troubleshooting
