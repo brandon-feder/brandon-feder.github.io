@@ -1,0 +1,109 @@
+/* settings */
+
+:root {
+    --background-color: #262626;
+    --text-color: white;
+    --link-color: #64a0ff;
+    --link-decor: none;
+    --accent-text-color: #aaa;
+    --important-font: "Mozilla Headline", sans-serif;
+    --important-font-weight: 500;
+    --indent-size: 25px;
+    --font: sans;
+    --text-margin: 20px;
+}
+
+/* animations */
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* general */
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font);
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--important-font);
+    font-weight: var(--important-font-weight);
+}
+
+p {
+    text-indent: var(--indent-size);
+    text-align: justify;
+    margin-bottom: var(--text-margin);
+    margin-top: 0;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: var(--link-decor);
+}
+
+a svg {
+    height: 20px;
+    width: 20px;
+    display: block;
+    float: left;
+    margin-top: 1px;
+    margin-right: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--accent-text-color);
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* content */
+
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px;
+    border: 1px var(--accent-text-color) dashed;
+    color: var(--text-color);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    /* box-shadow: 3px 3px var(--link-color); */
+    transition-duration: 0.1s;
+    border: 1px var(--text-color) solid;
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
+}
+
+.gallery img {
+    object-fit: cover;
+    vertical-align: bottom;
+    min-height: 100%;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.gallery a {
+    display: flex;
+}
