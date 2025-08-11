@@ -5,7 +5,7 @@ from PIL import Image
 from pathlib import Path
 
 # === CONFIG ===
-INPUT_DIR = "photos-large"  # Change to your directory
+INPUT_DIR = "/home/koala/Photography"  # Change to your directory
 OUTPUT_DIR = "assets/photos"   # Output directory (will be created if not exist)
 MAX_SIZE_MB = 1
 SUPPORTED_FORMATS = ('.jpg', '.JPG' ,'.jpeg', '.png', '.bmp', '.tiff', '.webp')  # Add more as needed
