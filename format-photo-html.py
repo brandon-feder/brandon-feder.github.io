@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 
-PHOTO_DIR = "assets/photos"
+PHOTO_DIR = "assets/photos/morocco"
 
 images = [p for p in Path(PHOTO_DIR).rglob("*")]
 

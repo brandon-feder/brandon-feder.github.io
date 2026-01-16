@@ -5,8 +5,9 @@ from PIL import Image
 from pathlib import Path
 
 # === CONFIG ===
-INPUT_DIR = "/home/koala/Photography"  # Change to your directory
-OUTPUT_DIR = "assets/photos"   # Output directory (will be created if not exist)
+INPUT_DIR = "/home/koala/Photography/1-6-26"  # Change to your directory
+RECURSIVE_SEARCH = False # whether to search for photos recursively in `INPUT_DIR`
+OUTPUT_DIR = "assets/photos/morocco"   # Output directory (will be created if not exist)
 MAX_SIZE_MB = 1
 SUPPORTED_FORMATS = ('.jpg', '.JPG' ,'.jpeg', '.png', '.bmp', '.tiff', '.webp')  # Add more as needed
 
@@ -35,7 +36,12 @@ def compress_and_convert_to_jpg(input_path, output_path_stem, quality=85):
         return None
 
 def find_images(directory):
-    return [p for p in Path(directory).rglob("*") if p.suffix.lower() in SUPPORTED_FORMATS]
+    if RECURSIVE_SEARCH:
+        it = Path(directory).rglob("*")
+    else:
+        it = Path(directory).glob("*")
+        
+    return [p for p in it if p.suffix.lower() in SUPPORTED_FORMATS]
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)

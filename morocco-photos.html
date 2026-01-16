@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- general stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/style/general.css">
+
+    <!-- flexbox stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/style/flex-box.css">
+</head>
+
+<div class="include-html" include-path="/views/icons.html"></div>
+
+<body>
+
+<div class="content">
+    <a class="btn" href="/">
+        <svg><use href="#icon-arrow-left"/></svg>
+        Home
+    </a>
+
+    <br><br>
+
+    <div class="fb gallery">
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0001.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0001.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0002.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0002.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0003.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0003.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0004.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0004.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0007.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0007.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0008.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0008.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/20251228_0009.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/20251228_0009.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3210.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3210.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3151.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3151.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3088.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3088.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3070.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3070.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3036.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3036.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3253.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3253.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3511.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3511.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3622.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3622.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/morocco/IMG_3565.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/morocco/IMG_3565.jpg">
+    </a>
+</div>
+
+    </div>
+</div>
+
+</body>
+
+<!-- include other html files -->
+<script src="/scripts/include-html.js"></script>
+<script>
+    var elements = document.getElementsByClassName("include-html")
+    for(let elem of elements) {
+        path = elem.getAttribute("include-path")
+        if(path != null) includeHtml(elem, path);
+    }
+</script>
+
+</html>
