@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon's Website</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- general stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/style/general.css">
+
+    <!-- flexbox stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/style/flex-box.css">
+</head>
+
+<div class="include-html" include-path="/views/icons.html"></div>
+
+<body>
+
+<div class="content">
+    <a class="btn" href="/">
+        <svg><use href="#icon-arrow-left"/></svg>
+        Home
+    </a>
+
+    <br><br>
+
+    <div class="fb gallery">
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2326.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2326.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2323.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2323.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2322.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2322.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2321.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2321.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2318.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2318.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2310.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2310.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2307.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2307.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2304.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2304.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2298.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2298.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2296.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2296.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2290.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2290.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2287.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2287.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2277.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2277.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2269.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2269.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2244.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2244.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2184.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2184.jpg">
+    </a>
+</div>
+
+<div class="sm-3 lg-h">
+    <a href="assets/photos/fourth-july-25/IMG_2157.jpg" target="_blank">
+        <img loading="lazy" class="photo" src="assets/photos/fourth-july-25/IMG_2157.jpg">
+    </a>
+</div>
+
+    </div>
+</div>
+
+</body>
+
+<!-- include other html files -->
+<script src="/scripts/include-html.js"></script>
+<script>
+    var elements = document.getElementsByClassName("include-html")
+    for(let elem of elements) {
+        path = elem.getAttribute("include-path")
+        if(path != null) includeHtml(elem, path);
+    }
+</script>
+
+</html>
